@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# My custom directory for template binary files
+temp_bin/
