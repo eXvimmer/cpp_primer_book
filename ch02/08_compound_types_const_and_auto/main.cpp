@@ -31,4 +31,24 @@ int main() {
   /* auto &n{i}, *p2{&ci}; // ERROR: type deduced from i is int & type deduced
    *                       // from ci is const int
    */
+
+  /* Exercise 2.33 & 2.34:
+   * Using the variable definitions from this section, determine what happens
+   * in each of these assignments:
+   * a = 42; b = 42; c = 42; d = 42; e = 42; g = 42;
+   *
+   * answer:
+   * a = 42 is ok;
+   * b = 42 is ok;
+   * c = 42 is ok;
+   * d = 42 is not ok;
+   * e = 42 is not ok;
+   * g = 42 is not ok;
+   */
+  a = 42;
+  b = 42;
+  c = 42;
+  /* d = 42; // ERROR: */
+  /* e = 42; // ERROR: */
+  /* g = 42; // ERROR: */
 }
