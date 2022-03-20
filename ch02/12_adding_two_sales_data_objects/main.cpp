@@ -1,4 +1,4 @@
-/* #include "sales_data.h" */
+#include "SalesData.h"
 #include <iostream>
 #include <string>
 
@@ -6,20 +6,15 @@ using std::cin;
 using std::cout;
 using std::string;
 
-// TODO: move this struct to the header file
-struct SalesData {
-  string bookNo;
-  unsigned unitsSold;
-  double revenue;
-};
-
 int main() {
   SalesData data1, data2;
 
   double price{0};
+  cout << "Enter ISBN, units sold and price for book1: ";
   cin >> data1.bookNo >> data1.unitsSold >> price;
   data1.revenue = data1.unitsSold * price;
 
+  cout << "Enter ISBN, units sold and price for book2: ";
   cin >> data2.bookNo >> data2.unitsSold >> price;
   data2.revenue = data2.unitsSold * price;
 
