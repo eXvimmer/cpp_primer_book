@@ -9,7 +9,8 @@ int main() {
   string line;
 
   while (std::getline(cin, line)) {
-    cout << line << '\n';
+    if (!line.empty())
+      cout << line << '\n';
   }
 
   return 0;
