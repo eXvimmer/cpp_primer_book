@@ -1,23 +1,26 @@
 #include <iostream>
+#include <string>
 #include <vector>
 
 using std::cin;
 using std::cout;
+using std::string;
 using std::vector;
 
 int main() {
-  int n{};
+  string s{};
 
-  cout << "Enter a sequence of numbers. (Press ctrl-d when you're done.)\n";
+  cout << "Enter a sequence of strings separated by a space. (Press ctrl-d "
+          "when you're done.)\n";
 
-  vector<int> vec{};
+  vector<string> vec{};
 
-  while (cin >> n) {
-    vec.push_back(n);
+  while (cin >> s) {
+    vec.push_back(s);
   }
 
   cout << "your entries are:\n[ ";
-  for (const int i : vec) {
+  for (const string i : vec) {
     cout << i << ' ';
   }
   cout << "]\n";
