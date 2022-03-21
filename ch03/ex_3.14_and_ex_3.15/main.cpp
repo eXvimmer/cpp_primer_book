@@ -20,7 +20,7 @@ int main() {
   }
 
   cout << "your entries are:\n[ ";
-  for (const string i : vec) {
+  for (const string &i : vec) {
     cout << i << ' ';
   }
   cout << "]\n";
