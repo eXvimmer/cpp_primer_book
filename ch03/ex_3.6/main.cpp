@@ -8,9 +8,11 @@ int main() {
   string s{"Mustafa Hayati"};
   cout << s << '\n';
 
-  for (auto &c : s) {
+  for (char &c : s) {
     c = 'X';
   }
 
   cout << s << '\n';
+
+  return 0;
 }
