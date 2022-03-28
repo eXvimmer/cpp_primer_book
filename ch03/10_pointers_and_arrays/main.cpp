@@ -1,5 +1,7 @@
+#include <iostream>
 #include <string>
 
+using std::cout;
 using std::string;
 
 int main() {
@@ -13,4 +15,15 @@ int main() {
 
   decltype(ia) ia4{0, 1, 2, 3, 4,
                    5, 6, 7, 8, 9}; // no conversion array of 9 int
+
+  int *p{ia};
+  ++p; // now p points to ia[1], same as iterators
+  cout << *p << '\n';
+
+  int *e{&ia[10]}; // an off-the-end pointer, same as iterator.end
+
+  for (int *b{ia}; b != e; ++b) {
+    cout << *b << ' ';
+  }
+  cout << '\n';
 }
